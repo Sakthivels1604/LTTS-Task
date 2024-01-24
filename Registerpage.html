@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration Page</title>
+</head>
+<body>
+    <h1>Sakthi Music Registration Page</h1>
+    <h3> If you are new user please click the below "Register" button for registration.</h3>
+    <button onclick="showRegisterForm()">Register</button>
+    
+    <div id="registerForm" style="display: none;">
+        <form onsubmit="return registerUser()">
+            <p>
+                <label for="name">Name:</label>  <input type="text" placeholder="Enter your name" id="name">
+            </p>
+            <p>
+                <label for="email">Email:</label>  <input type="text" placeholder="eg:Sakthivelxyz@gmail.com" id="email">
+            </p>
+            <p>
+                <label for="phone">Phone Number:</label> <input type = "number" placeholder="Enter your phone number" id="phone">
+            </p>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <h3>After Registration Click </h3>
+    <a href ="Login.html">Login</a>
+    <script>
+        function showRegisterForm() {
+            document.getElementById('registerForm').style.display = 'block';
+        }
+
+        function registerUser() {
+            
+            alert('Registration successful! Verification mail sent.');
+            return true; //
+        }
+    </script>
+
+</body>
+</html>
